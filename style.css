@@ -13,6 +13,7 @@ html, body {
     background-color: rgb(21, 21, 21);
     color: #f1f1f1;
     background-color: rgb(21, 21, 21);
+    overflow-x: hidden;
 }
 
 h2 {
@@ -293,6 +294,8 @@ h2 {
     .release-card {
         flex-basis: 100%;
     }  
+
+
 }
 
 footer {
