@@ -84,3 +84,64 @@ const currentYear = new Date().getFullYear();
 
 
 year.innerHTML = currentYear;
+
+//CAROUSEL
+
+document.addEventListener('DOMContentLoaded', function () {
+  const carousel = document.querySelector('.carousel');
+  const slides = document.querySelectorAll('.slide');
+  const prevButton = document.querySelector('.prev-button');
+  const nextButton = document.querySelector('.next-button');
+  let currentIndex = 0;
+  let currentPercentage = 0
+
+  function showNextSlide() {
+      if(currentIndex >= slides.length - 3){
+          return;
+      } else {
+          console.log()
+          currentPercentage -= 26.5
+          carousel.style.transform = `translateX(${currentPercentage}%)`;
+      }  
+  }
+
+  function showPrevSlide() {
+      if(currentIndex < 0){
+          return;
+      } else {
+          currentPercentage += 26.5
+          carousel.style.transform = `translateX(${currentPercentage}%)`;
+      }  
+  }
+
+  prevButton.addEventListener('click', function () {
+    if(currentIndex === 1){
+      prevButton.style.background = "gray"
+    }
+      if(currentIndex <= 0){
+        prevButton.style.background = "gray"
+          return;
+      } else {
+          currentIndex--;
+          console.log(currentIndex)
+          showPrevSlide();
+          nextButton.style.background = "#fff"
+      }
+      
+  });
+
+  nextButton.addEventListener('click', function () {
+    if(currentIndex === slides.length - 5){
+      nextButton.style.background = "gray"
+    }
+      if (currentIndex >= 4) {
+          return;
+      } else {
+          currentIndex++;
+          console.log(currentIndex)
+          prevButton.style.background = "#fff"
+          showNextSlide();
+      }
+
+  });
+});
