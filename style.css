@@ -60,7 +60,7 @@ h2 {
 
 .spirograph {
   max-height: 100vh;
-  animation: rotate360 60s linear infinite;
+  animation: rotate360 60s linear infinite, grayscaleToColor linear 1.2s;
 }
 
 @keyframes rotate360 {
@@ -72,6 +72,16 @@ h2 {
     transform: rotate(360deg);
   }
 }
+
+@keyframes grayscaleToColor {
+    from {
+     filter: grayscale(100%);
+    }
+  
+    to {
+        filter: grayscale(0%);
+    }
+  }
 
 @media screen and (max-width: 768px) {
   /* CSS rules to apply when the screen width is 768 pixels or less */
@@ -295,6 +305,10 @@ h2 {
 @media screen and (max-width: 768px) {
   .release-card {
     flex-basis: 100%;
+  }
+
+  #releases-section {
+    background-image: url("images/releases-background-mobile.jpg");
   }
 }
 
