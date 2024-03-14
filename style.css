@@ -338,13 +338,12 @@ h2 {
   position: relative;
   width: 100%;
   overflow: scroll;
-  padding: 16px;
   margin-bottom: 40px;
 }
 
 .carousel {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   transition: transform 0.5s ease;
 }
 
