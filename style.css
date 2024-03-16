@@ -262,6 +262,11 @@ h2 {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment:fixed ;
+}
+
+#releases-section h2 {
+  margin-top: 50px;
 }
 
 .releases-card-container {

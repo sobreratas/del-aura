@@ -132,7 +132,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   nextButton.addEventListener('click', function () {
     if(currentIndex === slides.length - 5){
-      nextButton.style.background = "gray"
+      nextButton.style.background = "gray";
+
     }
       if (currentIndex >= 4) {
           return;
