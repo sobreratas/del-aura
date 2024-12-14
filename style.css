@@ -258,7 +258,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("images/releases-background.png");
+  background-image: url("images/releases-background-opt.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -396,7 +396,7 @@ h2 {
   right: 10px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .carousel-container {
    padding: 0 16px;
   }
